@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+
+    <meta property="og:type" content="movie"/>
+    <meta property="og:title" th:attr="content='神马影院'+${title}+'列表-播放最新最全的电影电视剧'"/>
+    <meta property="og:description" content="【神马影院】每天为您提供好看的免费电影,手机电影,电视剧,动漫,综艺娱乐,在线观看,每天不定时更新,最新最全的电影尽在神马影院。"/>
+    <meta property="og:image" content="http://www.aoklite.com/images/logo2.png">
+    <meta property="og:release_date" content="2019-11-01 20:20:21">
+
+    <title th:text="'神马影院'+${title}+'列表-播放最新最全的电影电视剧'"></title>
+    <meta name="keywords" th:attr="content=${title}+'神马影院，神马免费电影网,韩国电影,美国大片,爱情电影,快播电影,午夜电影院,免费电影播放器,免费视频,最新电影,好看的电影,好看的电视剧,私人影院,在线播放,vip电影,vip电视'"/>
+    <meta name="description" content="【神马影院】每天为您提供好看的免费电影,手机电影,电视剧,动漫,综艺娱乐,在线观看,每天不定时更新,最新最全的电影尽在神马影院。"/>
+    <meta name="Resource-type" content="神马影院-最新热播电视剧电影在线免费观看 ">
+    <meta name="baidu-site-verification" content="code-3SwZDoczTf" />
+<meta name="360-site-verification" content="1a26ba3286d33ab37203ea11443004eb" />    
+<link href="/css/base.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/shenma.ico">
+    <script src="https://dss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d94c9e1e137c46d8da3746f8fea539b6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+<div id="header">
+    <div id="headbar">
+        <div class="layout fn-clear">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo2.png" style="height: 50px;" alt="神马影院" title="神马影院">
+                </a>
+            </div>
+            <!-- // logo end -->
+
+            <!-- // searchbar end -->
+
+            <div id="hotkeys">
+                <label>热门推荐：</label><a href="/" target="_blank">影院热映 </a>
+            </div>
+            <!-- // hotkeys end -->
+        </div>
+    </div>
+    <!-- // headbar end -->
+
+    <div id="navbar">
+        <div class="layout fn-clear add1">
+            <ul id="nav">
+                <li rel="home-nav" class="nav-item current"><a href="/">首页</a></li>
+                <li rel="tv-nav" class="nav-item  "><a href="/list/dsj.html">电视剧</a></li>
+                <li rel="movie-nav" class="nav-item  "><a href="/list/dy.html">电影</a></li>
+
+                <li rel="cartoon-nav" class="nav-item "><a href="/list/dh.html ">动画</a></li>
+
+                <li rel="fun-nav" class="nav-item "><a href="/list/zy.html ">综艺</a></li>
+
+                <li rel="tydy-nav" class="nav-item "><a href="/list/hj.html ">韩剧</a></li>
+
+                <form class="form-inline" action="/search" method="post"  target="_blank" >
+                    <input type="text" class="form-control" name="str" placeholder="再此输入你想看的影片">
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </ul>
+            <!-- // nav end -->
+
+            <div id="looked-record">
+                <h5>我的观看记录</h5>
+                <div class="looked-box">
+                    <ul class="highlight" id="playhistory">
+                    </ul>
+                </div>
+            </div>
+            <!-- // looked-record end -->
+        </div>
+    </div>
+    <!-- // navbar end -->
+
+    <div id="sub-nav">
+        <div class="layout fn-clear">
+            <div id="home-nav" class="sub-nav-item">
+                <p class="sub-nav-tv fn-left">
+                    <label>电视剧：</label>
+
+                    <a href="/list/dsj-guochan.html" target="_blank">国产</a> <em>|</em>
+
+                    <a href="/list/dsj-xianggang.html" target="_blank">香港</a> <em>|</em>
+
+                    <a href="/list/dsj-taiwai.html" target="_blank">台湾</a> <em>|</em>
+
+                    <a href="/list/dsj-riben.html" target="_blank">日本</a> <em>|</em>
+
+                    <a href="/list/dsj-hanguo.html" target="_blank">韩国</a> <em>|</em>
+
+
+                    <a href="/list/dsj-oumei.html" target="_blank">欧美</a> <em>|</em>
+
+                </p>
+                <p class="sub-nav-movie fn-right">
+                    <label>电影：</label>
+
+
+                    <a href="/list/zy-lunli.html" target="_blank">伦.理</a><em>|</em>
+                    <a href="/list/zy-xiezhen.html" target="_blank">写.真</a><em>|</em>
+                    <a href="/list/dy-zainan.html" target="_blank">灾难</a><em>|</em>
+                    <a href="/list/dy-dongzuo.html" target="_blank">动作</a><em>|</em>
+                    <a href="/list/dy-xiju.html" target="_blank">喜剧</a><em>|</em>
+                    <a href="/list/dy-aiqing.html" target="_blank">爱情</a><em>|</em>
+                    <a href="/list/dy-kehuan.html" target="_blank">科幻</a><em>|</em>
+                    <a href="/list/dy-kongbu.html" target="_blank">恐怖</a><em>|</em>
+                    <a href="/list/dy-zhanzheng.html" target="_blank">战争</a><em>|</em>
+                    <a href="/list/dy-xuanyi.html" target="_blank">悬疑</a><em>|</em>
+                    <a href="/list/dy-xuanyi.html" target="_blank">罪案</a><em>|</em>
+                    <a href="/list/dy-jilu.html" target="_blank">纪录</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="tv-nav" style="display: none;" class="sub-nav-item">
+                <p>
+                    <label>电视剧：</label>
+
+                    <a href="/list/dsj-guochan.html" target="_blank">国产电视剧</a><em>|</em>
+                    <a href="/list/dsj-xianggang.html" target="_blank">香港电视剧</a><em>|</em>
+                    <a href="/list/dsj-taiwan.html" target="_blank">台湾电视剧</a><em>|</em>
+                    <a href="/list/dsj-riben.html" target="_blank">日本电视剧</a><em>|</em>
+                    <a href="/list/dsj-hanguo.html" target="_blank">韩国电视剧</a><em>|</em>
+                    <a href="/list/dsj-oumei.html" target="_blank">欧美电视剧</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="movie-nav" style="display: none;" class="sub-nav-item">
+                <p>
+                    <label>电影：</label>
+
+                    <a href="/list/dy-zainan.html" target="_blank">灾难片</a><em>|</em>
+                    <a href="/list/dy-dongzuo.html" target="_blank">动作片</a><em>|</em>
+                    <a href="/list/dy-xiju.html" target="_blank">喜剧片</a><em>|</em>
+                    <a href="/list/dy-aiqing.html" target="_blank">爱情片</a><em>|</em>
+                    <a href="/list/dy-kehuan.html" target="_blank">科幻片</a><em>|</em>
+                    <a href="/list/dy-kongbu.html" target="_blank">恐怖片</a><em>|</em>
+                    <a href="/list/dy-zhanzheng.html" target="_blank">战争片</a><em>|</em>
+                    <a href="/list/dy-jingsong.html" target="_blank">惊悚片</a><em>|</em>
+                    <a href="/list/dy-zuian.html" target="_blank">罪案片</a><em>|</em>
+                    <a href="/list/dy-xuanyi.html" target="_blank">悬疑片</a><em>|</em>
+                    <a href="/list/dy-juqing.html" target="_blank">剧情片</a><em>|</em>
+                    <a href="/list/dy-jilu.html" target="_blank">纪录片</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="cartoon-nav" style="display: none;" class="sub-nav-item">
+                <p>
+                    <label>经典动漫：</label>
+
+                    <a href="/list/dh.html" target="_blank">动画</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="fun-nav" style="display: none;" class="sub-nav-item">
+                <p>
+                    <label>综艺娱乐：</label>
+
+                    <a href="/list/zy-xiezhen.html" target="_blank">写.真</a><em>|</em>
+                    <a href="/list/zy-lunli.html" target="_blank">伦.理</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="weidy-nav" style="display: none;" class="sub-nav-item">
+                <p>
+                    <label>韩剧：</label>
+
+                    <a href="/list/hj.html" target="_blank">韩剧</a><em>|</em>
+                </p>
+            </div>
+            <!-- // sub-nav-item end -->
+
+            <div id="tydy-nav" style="display: none;" class="sub-nav-item">
+                <p></p>
+            </div>
+
+        </div>
+    </div>
+    <!-- // sub-nav end -->
+</div>
+
+
+<!--//广告位 -->
+
+    </script></div>
+
+    <div id="content">
+        <div  class="gonggao">
+            <p><b><font color=red>网站公告</font></b>：欢迎光临神马影院，本站所有电影完全免费，尝试按Ctrl+D收藏我们！ 如果您还有任何疑问，请您给本站
+                <a href="/book.html" target="_blank"><font color=#669900>留言</font></a>，我们将尽快给您答复！</font></a>
+            </p>
+            <p  id="book"><a href="/api.html" target="_blank">如果没有找到你的影片,或者觉得本站的视频不清晰，请点击这里观看原蓝光视频</a></p>
+        </div>
+
+        <div class="layout fn-clear">
+            <div class="mainbox fn-left">
+                <div class="ui-box l-h" id="movie-module">
+                    <div class="ui-title fn-clear">
+                        <label class="ui-mark" id="type1" th:text="${title}">电影</label>
+                        <h2 id="type2" th:text="${title}">电影</h2>
+
+                        <span><a href="/list/dy-zainan.html" target="_blank">灾难片</a><em>|</em></span>
+                        <span><a href="/list/dy-dongzuo.html" target="_blank">动作片</a><em>|</em></span>
+                        <span><a href="/list/dy-xiju.html" target="_blank">喜剧片</a><em>|</em></span>
+                        <span><a href="/list/dy-zhanzheng" target="_blank">战争片</a><em>|</em></span>
+                        <span><a href="/list/dy-aiqing.html" target="_blank">爱情片</a><em>|</em></span>
+                        <span><a href="/list/dy-kehuan.html" target="_blank">科幻片</a><em>|</em></span>
+                        <span><a href="/list/dy-kongbu.html" target="_blank">恐怖片</a><em>|</em></span>
+
+                    </div>
+                    <div class="ui-cnt">
+                        <ul class="img-list fn-clear" id="list">
+
+                            <li th:each="u:${main}">
+                                <a th:href="'/info/'+${u.id}+'.html'" class="play-pic" th:attr="title=${u.name}" target="_blank">
+                                    <img th:src="${u.img}"  th:attr="alt=${u.name}" />
+                                    <label class="fbg">&nbsp;</label>
+                                    <label class="txt" th:text="${u.beizhu}">HD</label>
+                                </a>
+                                <h5><a th:href="'/info/'+${u.id}+'.html'" th:attr="title=${u.name}" target="_blank" th:text="${u.name}">黑色布达佩斯</a></h5>
+                                <p class="txt" th:text="${u.yanyuan}">卡塔·杜博,佐尔坦·施奈德,佐尔特·安格尔,雷卡·滕吉 </p>
+                                <p class="txt">
+								<span class="ratbar">
+									<span style="width:100%;" class="ratbar-item">&nbsp;</span>
+								</span>
+                                    <strong class="ratbar-num" th:text="${u.hot}">395</strong>
+                                </p>
+                            </li>
+
+
+                            </ul>
+                        <!-- // img-list end -->
+
+                        <!-- // primary-list end -->
+
+                        <div class="primary-page fn-clear">
+                            <div class="ui-pages">
+                                <p  id="book"><a href="/api.html" target="_blank">如果没有找到你的影片，请点击这里观看原蓝光视频</a></p>
+                                <div id="loadmore" >加载更多</div>
+                            </div>
+                        </div>
+                        <!-- // ui-box#primary-page end -->
+                    </div>
+                </div>
+                <!-- // ui-box end -->
+            </div>
+            <!-- // #primary end -->
+
+            <div class="sidebar fn-right">
+                <div class="ui-box">
+                    <div class="ui-box-item">
+                        <div class="ui-title">
+                            <h3>电影推荐榜</h3>
+                        </div>
+                        <div class="ui-cnt">
+                            <ul class="ranking-list">
+                                <ul class="ranking-list">
+                                    <li  th:each="randDianying1,randDianying2:${randDianying}">
+                                        <em class="red"  th:text="${randDianying2.count}"> 1 </em>
+                                        <span class="score"  th:text="${randDianying1.hot}">32150</span>
+                                        <h5><a th:href="'/info/'+${randDianying1.id}+'.html'"  th:text="${randDianying1.name}">梦幻岛(2020)/逃出梦幻岛</a></h5>
+                                    </li>
+
+
+                                </ul>
+                            </ul>
+                                <!-- // ranking-list end -->
+                        </div>
+                    </div>
+                    <!-- // ui-box-item end -->
+
+                    <div class="ui-box-item" id="score-ranking">
+                        <div class="ui-title">
+                            <h3>电视剧推荐榜</h3>
+                        </div>
+                        <div class="ui-cnt">
+                            <ul class="ranking-list">
+                                <ul class="ranking-list">
+                                    <li  th:each="randDianshiju1,randDianshiju2:${randDianshiju}">
+                                        <em class="red"  th:text="${randDianshiju2.count}"> 1 </em>
+                                        <span class="score"  th:text="${randDianshiju1.hot}">32150</span>
+                                        <h5><a th:href="'/info/'+${randDianshiju1.id}+'.html'"  th:text="${randDianshiju1.name}">梦幻岛(2020)/逃出梦幻岛</a></h5>
+                                    </li>
+
+                                </ul></ul>
+                                <!-- // ranking-list end -->
+                        </div>
+                    </div>
+                    <div class="ui-box-item" id="score-ranking">
+                        <div class="ui-title">
+                            <h3>动漫推荐榜</h3>
+                        </div>
+                        <div class="ui-cnt">
+                            <ul class="ranking-list">
+                                <ul class="ranking-list">
+                                    <li  th:each="randDongman1,randDongman2:${randDongman}">
+                                        <em class="red"  th:text="${randDongman2.count}"> 1 </em>
+                                        <span class="score"  th:text="${randDongman1.hot}">32150</span>
+                                        <h5><a th:href="'/info/'+${randDongman1.id}+'.html'"  th:text="${randDongman1.name}">梦幻岛(2020)/逃出梦幻岛</a></h5>
+                                    </li>
+                                </ul></ul>
+                            <!-- // ranking-list end -->
+                        </div>
+                    </div>
+                    <div class="ui-box-item" id="score-ranking">
+                        <div class="ui-title">
+                            <h3>韩剧推荐榜</h3>
+                        </div>
+                        <div class="ui-cnt">
+                            <ul class="ranking-list">
+                                <ul class="ranking-list">
+                                    <li  th:each="randHanju1,randHanju2:${randHanju}">
+                                        <em class="red"  th:text="${randHanju2.count}"> 1 </em>
+                                        <span class="score"  th:text="${randHanju1.hot}">32150</span>
+                                        <h5><a th:href="'/info/'+${randHanju1.id}+'.html'"  th:text="${randHanju1.name}">梦幻岛(2020)/逃出梦幻岛</a></h5>
+                                    </li>
+                                </ul></ul>
+                            <!-- // ranking-list end -->
+                        </div>
+                        <dl class="indexing-item">
+                            <dt>按电影地区：</dt>
+                            <dd><a href="/list/dh-oumei.html">美国</a></dd>
+                            <dd><a href="/list/dh-xianggang.html">香港</a></dd>
+                            <dd><a href="/list/dh-taiwan.html">台湾</a></dd>
+                            <dd><a href="/list/dh-dalu.html">大陆</a></dd>
+                            <dd><a href="/list/dh-hanguo.html">韩国</a></dd>
+                            <dd><a href="/list/dh-riben.html">日本</a></dd>
+                            <dd><a href="/list/dh-dalu.html">内地</a></dd>
+                            <dd><a href="/list/dh-oumei.html">德国</a></dd>
+                            <dd><a href="/list/dh-oumei.html">法国</a></dd>
+                            <dd><a href="/list/dh-oumei.html">英国</a></dd>
+                            <dd><a href="/list/dh.html">其它</a></dd>
+                        </dl>
+                        <dl class="indexing-item">
+                            <dt>按电视剧类型：</dt>
+
+                            <dd><a href="/list/dsj-oumei.html" target="_blank">欧美剧</a></dd>
+                            <dd><a href="/list/dsj-guochan.html" target="_blank">国产剧</a></dd>
+                            <dd><a href="/list/dsj-xianggang.html" target="_blank">香港剧</a></dd>
+                            <dd><a href="/list/dsj-taiwan.html" target="_blank">台湾剧</a></dd>
+                            <dd><a href="/list/dsj-riben.html" target="_blank">日本剧</a></dd>
+                            <dd><a href="/list/dsj-hanguo.html" target="_blank">韩国剧</a></dd>
+                            <dd><a href="/list/dsj-oumei.html" target="_blank">美国剧</a></dd>
+                            <dd><a href="/list/dsj-oumei.html" target="_blank">德国剧</a></dd>
+                        </dl>
+                        <dl class="indexing-item">
+                            <dt>按动漫地区：</dt>
+                            <dd><a href="/list/dh-riben.html">日本</a></dd>
+                            <dd><a href="/list/dh-oumei.html">美国</a></dd>
+                            <dd><a href="/list/dh-xianggang.html">香港</a></dd>
+                            <dd><a href="/list/dh-taiwan.html">台湾</a></dd>
+                            <dd><a href="/list/dh-dalu.html">大陆</a></dd>
+                            <dd><a href="/list/dh-hanguo.html">韩国</a></dd>
+                            <dd><a href="/list/dh-dalu.html">内地</a></dd>
+                            <dd><a href="/list/dh.html">其它</a></dd>
+                        </dl>
+                        <dl class="indexing-item">
+                            <dt>按韩剧年代：</dt>
+                            <dd><a href="/list/hj-2020.html">2020</a></dd>
+                            <dd><a href="/list/hj-2019.html">2019</a></dd>
+                            <dd><a href="/list/hj-2018.html">2018</a></dd>
+                            <dd><a href="/list/hj-2017.html">2017</a></dd>
+                            <dd><a href="/list/hj-2016.html">2016</a></dd>
+                            <dd><a href="/list/hj-2015.html">2015</a></dd>
+                            <dd><a href="/list/hj-2014.html">2014</a></dd>
+                            <dd><a href="/list/hj-2013.html">2013</a></dd>
+                            <dd><a href="/list/hj-2012.html">2012</a></dd>
+                            <dd><a href="/list/hj-2011.html">2011</a></dd>
+                            <dd><a href="/list/hj-2010.html">2010</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- // sidebar end -->
+        </div>
+        <!-- // layout end -->
+
+<!-- // sidebar end -->
+
+
+<!-- // layout end -->
+</body>
+<div class="layout" id="footer">
+    <p>免责声明：神马影院为你提供的电影，电视剧均系抓取于互联网和各大视频网站，本站只提供页面服务，更加不会提供影片存储和上传</p>
+    <p>若本站收录的节目无意侵犯了贵司版权，请联系我们，我们会及时处理和回复，谢谢，newclassone￥protonmail.com(@)</p>
+    <p>Copyright @ 2012  <a href="/sitemap.xml" target="_blank">网站地图</a></p>
+    </div>
+<!-- // footer end --><!-- // footer end -->
+<script>
+var page=1;
+var url=window.location.pathname;
+   $(function () {
+    $("#loadmore").click(function () {
+    var split=url.split("/");
+    console.log(split[2])
+    var split2=split[2].split("\.");
+
+    $.ajax({
+    url:"/loadmore",
+    type:"post",
+    data:{"str":split2[0],"page":page },
+    success : function(data) {
+    if(data=="[]"){
+    $("#loadmore").text("等待更新");
+
+    return;
+    }
+    var models = eval("("+data+")");
+    for(var i in models){
+    $("#list").append("<li  ><a href=\"/info/"+models[i].id+".html\" class=\"play-pic\"   target=\"_blank\"><img src=\""+models[i].img+"\"  /><label class=\"fbg\">&nbsp;</label><label class=\"txt\" >"+models[i].beizhu+"</label></a><h5><a href=\"/info"+models[i].id+".html\"   target=\"_blank\" >"+models[i].name+"</a></h5><p class=\"txt\"  >"+models[i].yanyuan+"</p><p class=\"txt\"><span class=\"\"><span style=\"width:70px;margin-top: 3px;\" class=\"ratbar-item\">&nbsp;</span></span><strong class=\"ratbar-num\"  >"+models[i].hot+"</strong></p></li>");
+
+    }
+
+    }
+    })
+
+    page++;
+    })
+    })
+
+</script>
+<div style="display: none"><script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279415871&web_id=1279415871"></script></div>
+<!-- 360收录 -->
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+<!--51统计-->
+<script type="text/javascript" src="//js.users.51.la/20989537.js"></script>
+</body>
+</html>

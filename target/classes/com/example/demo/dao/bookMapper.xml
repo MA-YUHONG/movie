@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.bookMapper" >
+
+
+    <select id="select" resultType="com.example.demo.entity.book">
+        select * From book order by id desc
+    </select>
+
+    <insert id="addbook">
+
+        insert book values(default,#{content},#{date})
+
+    </insert>
+
+
+
+
+    <select id="pool"  resultType="com.example.demo.entity.book">
+        SELECT * FROM book ORDER BY id DESC LIMIT 1
+    </select>
+</mapper>
