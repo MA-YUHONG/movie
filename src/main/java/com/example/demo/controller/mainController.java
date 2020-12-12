@@ -20,7 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@Api("swTest")
 public class mainController {
     @Autowired
     private services services;
