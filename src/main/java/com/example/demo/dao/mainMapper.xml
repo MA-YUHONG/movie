@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.mainMapper" >
+
+    <select id="rands" resultType="com.example.demo.entity.main">
+            SELECT * FROM main  ORDER BY RAND() LIMIT 14
+
+    </select>
+
+
+    <select id="newDianshi"  resultType="com.example.demo.entity.main">
+        select * from main WHERE movietype LIKE "%剧" order by gengxintime desc limit 14
+    </select>
+
+
+
+
+    <select id="newDianying" resultType="com.example.demo.entity.main">
+        SELECT * FROM main WHERE beizhu LIKE "%HD%" ORDER BY gengxintime DESC LIMIT 14
+    </select>
+
+    <select id="newDongman" resultType="com.example.demo.entity.main">
+        select * from main where movietype like "%动漫%" order by gengxintime desc limit 14
+    </select>
+
+    <select id="newZongyi" resultType="com.example.demo.entity.main">
+    select * from main where movietype like "%综艺%" order by gengxintime desc limit 14
+</select>
+
+    <select id="newHanju" resultType="com.example.demo.entity.main">
+        select * from main where movietype like "%韩%" order by gengxintime desc limit 14
+    </select>
+
+    <select id="randDianying" resultType="com.example.demo.entity.main">
+            SELECT * FROM main  WHERE beizhu LIKE "%HD%" ORDER BY RAND() desc LIMIT 10
+</select>
+
+    <select id="maxDianying" resultType="com.example.demo.entity.main">
+        SELECT * FROM main WHERE beizhu LIKE "%HD%" ORDER BY hot DESC LIMIT 10
+</select>
+
+    <select id="randDianshiju" resultType="com.example.demo.entity.main">
+         SELECT * FROM main  WHERE movietype LIKE "%剧" ORDER BY RAND() LIMIT 10
+</select>
+
+    <select id="maxDianshiju" resultType="com.example.demo.entity.main">
+        SELECT * FROM main WHERE movietype LIKE "%剧" ORDER BY hot DESC LIMIT 10
+</select>
+
+    <select id="randDongman" resultType="com.example.demo.entity.main">
+             SELECT * FROM main  WHERE movietype LIKE "%动漫%" ORDER BY RAND() LIMIT 10
+</select>
+
+    <select id="maxDongman" resultType="com.example.demo.entity.main">
+                SELECT * FROM main WHERE movietype LIKE "%动漫%" ORDER BY hot DESC LIMIT 10
+    </select>
+
+    <select id="randZongyi" resultType="com.example.demo.entity.main">
+       SELECT * FROM main  WHERE movietype LIKE "%综艺%" ORDER BY RAND() LIMIT 10
+</select>
+
+    <select id="maxZongyi" resultType="com.example.demo.entity.main">
+         SELECT * FROM main WHERE movietype LIKE "%综艺%" ORDER BY hot DESC LIMIT 10
+</select>
+
+
+    <select id="randHanju" resultType="com.example.demo.entity.main">
+    SELECT * FROM main  WHERE movietype LIKE "%韩%" ORDER BY RAND() LIMIT 10
+</select>
+
+
+    <select id="maxHanju" resultType="com.example.demo.entity.main">
+    SELECT * FROM main WHERE movietype LIKE "%韩%" ORDER BY hot DESC LIMIT 10
+</select>
+
+
+    <select id="select1"  resultType="com.example.demo.entity.main">
+    select * from main where  id=#{id}
+</select>
+
+
+    <select id="select5" resultType="com.example.demo.entity.main">
+        select * from main where id=#{mainid}
+    </select>
+
+
+    <select id="select6"  resultType="com.example.demo.entity.main">
+        select * From main
+        <if test="type=='dsj'">
+            where movietype like "%剧"
+        </if>
+        <if test="type=='dh'">
+            WHERE movietype LIKE "%动画%" OR movietype LIKE "%动漫%"
+        </if>
+        <if test="type=='zy'">
+            WHERE movietype LIKE "%综艺%"
+        </if>
+
+        <if test="type=='hj'">
+            WHERE movietype LIKE "韩%"
+        </if>
+        ORDER BY id DESC limit ${start},45
+    </select>
+
+
+    <select id="select7"  resultType="com.example.demo.entity.main">
+        select * From main where beizhu="HD"  ORDER BY id DESC  limit ${start},45
+    </select>
+
+    <select id="select8"   resultType="com.example.demo.entity.main">
+        select * from main where movietype like "%${type}%" limit ${start},45
+    </select>
+
+
+    <select id="select9"   resultType="com.example.demo.entity.main">
+    SELECT * FROM main WHERE movietype LIKE "%${type1}%" AND  shangyingtime=#{type2} LIMIT  ${start},45
+</select>
+
+    <select id="select10"   resultType="com.example.demo.entity.main">
+        SELECT * FROM main WHERE beizhu="HD" AND shangyingtime=#{type} LIMIT  ${start},45
+    </select>
+
+    <select id="select11" resultType="com.example.demo.entity.main">
+    select * from main where beizhu="HD" and place =#{place} limit ${start},45
+</select>
+    <select id="select12" resultType="com.example.demo.entity.main">
+
+SELECT * FROM main WHERE movietype LIKE "%${type}%"  AND place=#{place} limit ${start},45
+</select>
+
+    <select id="search"  resultType="com.example.demo.entity.main">
+    SELECT *  FROM main WHERE NAME like "%${str}%" or yanyuan like "%${str}%" or daoyan like  "%${str}%";
+
+</select>
+
+
+    <select id="newList"   resultType="com.example.demo.entity.main">
+        select * From main where data like "${str}%"
+    </select>
+
+</mapper>
