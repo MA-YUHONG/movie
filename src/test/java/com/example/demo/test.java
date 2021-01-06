@@ -8,8 +8,8 @@ import java.util.Date;
 public class test {
 @Test
     public  void test1(){
-        int start=5000;
-        int end=6000;
+        int start=6000;
+        int end=7000;
 
 
         System.out.println("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
