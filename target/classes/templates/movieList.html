@@ -227,7 +227,7 @@
 
                             <li th:each="u:${main}">
                                 <a th:href="'/info/'+${u.id}+'.html'" class="play-pic" th:attr="title=${u.name}" target="_blank">
-                                    <img th:src="${u.img}"  th:attr="alt=${u.name}" />
+                                    <img th:data-src="${u.img}" src="http://www.aoklite.com/images/wutu.png"  th:attr="alt=${u.name}" />
                                     <label class="fbg">&nbsp;</label>
                                     <label class="txt" th:text="${u.beizhu}">HD</label>
                                 </a>
@@ -448,3 +448,31 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 <script type="text/javascript" src="//js.users.51.la/20989537.js"></script>
 </body>
 </html>
+<script>
+    var imgs = document.querySelectorAll('img');
+
+    //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+    function getTop(e) {
+        var T = e.offsetTop;
+        while(e = e.offsetParent) {
+            T += e.offsetTop;
+        }
+        return T;
+    }
+
+    function lazyLoad(imgs) {
+        var H = document.documentElement.clientHeight;//获取可视区域高度
+        var S = document.documentElement.scrollTop || document.body.scrollTop;
+        for (var i = 0; i < imgs.length; i++) {
+            if (H + S > getTop(imgs[i])) {
+                if(imgs[i].src === 'http://www.aoklite.com/images/wutu.png') {
+                    imgs[i].src = imgs[i].getAttribute('data-src');
+                }
+            }
+        }
+    }
+
+    window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+        lazyLoad(imgs);
+    }
+</script>

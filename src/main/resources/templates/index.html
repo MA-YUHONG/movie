@@ -226,7 +226,7 @@
                     <li th:each="rand:${rands}">
 
                         <a th:href="'/info/'+${rand.id}+'.html'" target="_blank" class="play-pic">
-                            <img th:src="${rand.img}" th:attr="alt=${rand.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src='${rand.img}' th:attr="alt=${rand.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${rand.beizhu}" class="txt">第30集</label>
                         </a>
@@ -251,7 +251,7 @@
                     <li th:each="dianshi:${newDianshi}">
 
                         <a th:href="'/info/'+${dianshi.id}+'.html'" target="_blank" class="play-pic">
-                            <img th:src="${dianshi.img}" th:attr="alt=${dianshi.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${dianshi.img}" th:attr="alt=${dianshi.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dianshi.beizhu}" class="txt">第30集</label>
                         </a>
@@ -274,7 +274,7 @@
                     <li th:each="dianying:${newDianying}">
 
                         <a th:href="'/info/'+${dianying.id}+'.html'" target="_blank" class="play-pic">
-                            <img th:src="${dianying.img}" th:attr="alt=${dianying.name}"/>
+                            <img   src="http://www.aoklite.com/images/wutu.png" th:data-src="${dianying.img}" th:attr="alt=${dianying.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dianying.beizhu}" class="txt">第30集</label>
                         </a>
@@ -294,7 +294,7 @@
                     <li th:each="dongman:${newDongman}">
 
                         <a th:href="'/info/'+${dongman.id}+'.html'"   target="_blank" class="play-pic">
-                            <img th:src="${dongman.img}" th:attr="alt=${dongman.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${dongman.img}" th:attr="alt=${dongman.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dongman.beizhu}" class="txt">第30集</label>
                         </a>
@@ -316,7 +316,7 @@
                     <li th:each="zongyi:${newZongyi}">
 
                         <a th:href="'/info/'+${zongyi.id}+'.html'"   target="_blank" class="play-pic">
-                            <img th:src="${zongyi.img}" th:attr="alt=${zongyi.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${zongyi.img}" th:attr="alt=${zongyi.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${zongyi.beizhu}" class="txt">第30集</label>
                         </a>
@@ -337,7 +337,7 @@
 
                     <li th:each="hanju:${newHanju}">
                         <a th:href="'/info/'+${hanju.id}+'.html'" target="_blank" class="play-pic">
-                            <img th:src="${hanju.img}" th:attr="alt=${hanju.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${hanju.img}" th:attr="alt=${hanju.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${hanju.beizhu}" class="txt">第30集</label>
                         </a>
@@ -408,9 +408,7 @@
                         <li th:each="randDianyings:${randDianying}">
                             <a th:href="'/info/'+${randDianyings.id}+'.html'" class="play-pic" th:attr="alt=${randDianyings.name}"
                                target="_blank">
-                                <img th:src="${randDianyings.img}"
-
-                                     th:attr="alt=${randDianyings.name}"/>
+                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDianyings.img}"  th:attr="alt=${randDianyings.name}"/>
                                 <label class="fbg">&nbsp;</label>
                                 <label class="txt" th:text="${randDianyings.beizhu}">HD高清</label>
                             </a>
@@ -564,7 +562,7 @@
                         <li th:each="randDianshijus:${randDianshiju}">
                             <a th:href="'/info/'+${randDianshijus.id}+'.html'" class="play-pic" th:attr="alt=${randDianshijus.name}"
                                target="_blank">
-                                <img th:src="${randDianshijus.img}"
+                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDianshijus.img}"
 
                                      th:attr="alt=${randDianshijus.name}"/>
                                 <label class="fbg">&nbsp;</label>
@@ -703,9 +701,7 @@
                     <li th:each="randDongmans:${randDongman}">
                         <a th:href="'/info/'+${randDongmans.id}+'.html'"  class="play-pic" th:attr="alt=${randDongmans.name}"
                            target="_blank">
-                            <img th:src="${randDongmans.img}"
-
-                                 th:attr="alt=${randDongmans.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDongmans.img}" th:attr="alt=${randDongmans.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randDongmans.beizhu}">HD高清</label>
                         </a>
@@ -830,9 +826,7 @@
                     <li th:each="randZongyis:${randZongyi}">
                         <a th:href="'/info/'+${randZongyis.id}+'.html'"  class="play-pic" th:attr="alt=${randZongyis.name}"
                            target="_blank">
-                            <img th:src="${randZongyis.img}"
-
-                                 th:attr="alt=${randZongyis.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randZongyis.img}"  th:attr="alt=${randZongyis.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randZongyis.beizhu}">HD高清</label>
                         </a>
@@ -947,8 +941,7 @@
                     <li th:each="randHanju1:${randHanju}">
                         <a th:href="'/info/'+${randHanju1.id}+'.html'" class="play-pic" th:attr="alt=${randHanju1.name}"
                            target="_blank">
-                            <img th:src="${randHanju1.img}"
-
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src='${randHanju1.img}'
                                  th:attr="alt=${randHanju1.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randHanju1.beizhu}">HD高清</label>
@@ -1091,47 +1084,31 @@ document.write('<script src="' + src + '" id="sozz"><\/script>');
 </html>
 <script src="/js/base.js"></script>
 <script>
-    window.onload = function(){
-        // 获取图片列表，即img标签列表
-        var imgs = document.querySelectorAll('img');
+    var imgs = document.querySelectorAll('img');
 
-        // 获取到浏览器顶部的距离
-        function getTop(e){
-            return e.offsetTop;
+    //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+    function getTop(e) {
+        var T = e.offsetTop;
+        while(e = e.offsetParent) {
+            T += e.offsetTop;
         }
+        return T;
+    }
 
-        // 懒加载实现
-        function lazyload(imgs){
-            // 可视区域高度
-            var h = window.innerHeight;
-            //滚动区域高度
-            var s = document.documentElement.scrollTop || document.body.scrollTop;
-            for(var i=0;i<imgs.length;i++){
-                //图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
-                if ((h+s)>getTop(imgs[i])) {
-                    // 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
-                    (function(i){
-                        setTimeout(function(){
-                            // 不加立即执行函数i会等于9
-                            // 隐形加载图片或其他资源，
-                            //创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
-                            var temp = new Image();
-                            temp.src = imgs[i].getAttribute('data-src');//只会请求一次
-                            // onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
-                            temp.onload = function(){
-                                // 获取自定义属性data-src，用真图片替换假图片
-                                imgs[i].src = imgs[i].getAttribute('data-src')
-                            }
-                        },2000)
-                    })(i)
+    function lazyLoad(imgs) {
+        var H = document.documentElement.clientHeight;//获取可视区域高度
+        var S = document.documentElement.scrollTop || document.body.scrollTop;
+        for (var i = 0; i < imgs.length; i++) {
+            if (H + S > getTop(imgs[i])) {
+                var  temp=imgs[i].src;
+                if(imgs[i].src === 'http://www.aoklite.com/images/wutu.png') {
+                    imgs[i].src = imgs[i].getAttribute('data-src');
                 }
             }
         }
-        lazyload(imgs);
+    }
 
-        // 滚屏函数
-        window.onscroll =function(){
-            lazyload(imgs);
-        }
+    window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+        lazyLoad(imgs);
     }
 </script>
