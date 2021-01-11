@@ -108,24 +108,24 @@
     </select>
 
     <select id="select8"   resultType="com.example.demo.entity.main">
-        select * from main where movietype like "%${type}%" limit ${start},45
+        select * from main where movietype like "%${type}%" order by id desc limit ${start},45
     </select>
 
 
     <select id="select9"   resultType="com.example.demo.entity.main">
-    SELECT * FROM main WHERE movietype LIKE "%${type1}%" AND  shangyingtime=#{type2} LIMIT  ${start},45
+    SELECT * FROM main WHERE movietype LIKE "%${type1}%" AND  shangyingtime=#{type2} order by id desc  LIMIT  ${start},45
 </select>
 
     <select id="select10"   resultType="com.example.demo.entity.main">
-        SELECT * FROM main WHERE beizhu="HD" AND shangyingtime=#{type} LIMIT  ${start},45
+        SELECT * FROM main WHERE beizhu="HD" AND shangyingtime=#{type} order by id desc  LIMIT  ${start},45
     </select>
 
     <select id="select11" resultType="com.example.demo.entity.main">
-    select * from main where beizhu="HD" and place =#{place} limit ${start},45
+    select * from main where beizhu="HD" and place =#{place} order by id desc  limit ${start},45
 </select>
     <select id="select12" resultType="com.example.demo.entity.main">
 
-SELECT * FROM main WHERE movietype LIKE "%${type}%"  AND place=#{place} limit ${start},45
+SELECT * FROM main WHERE movietype LIKE "%${type}%"  AND place=#{place} order by id desc  limit ${start},45
 </select>
 
     <select id="search"  resultType="com.example.demo.entity.main">
