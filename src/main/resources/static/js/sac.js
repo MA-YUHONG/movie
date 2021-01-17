@@ -5,7 +5,7 @@ $("#btn1").click(function(){
         $("#ifra").append("<iframe sandbox='allow-top-navigation allow-same-origin allow-forms allow-scripts' id=\"iframe1\" src=\"https://z1.m1907.cn/?jx=" + ifraUrl + "\"    frameBorder=\"0\" width=\"100%\"  height=\"100%\"  allowfullscreen=\"true\"  ></iframe>")
         return;
     }
-    $("#ifra").append("<iframe id=\"iframe1\" src=\"https://www.xymav.com/?url="+$("#input1").val()+"\"    frameBorder=\"0\" width=\"100%\"  height=\"100%\"  allowfullscreen=\"true\"  ></iframe>")
+    $("#ifra").append("<iframe id=\"iframe1\" src=\"http://ycjw.lyhuilin.com:9998/?url="+$("#input1").val()+"\"    frameBorder=\"0\" width=\"100%\"  height=\"100%\"  allowfullscreen=\"true\"  ></iframe>")
 
 
 
