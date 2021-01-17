@@ -52,7 +52,7 @@
     <div id="navbar">
         <div class="layout fn-clear add1">
             <ul id="nav">
-                <li rel="home-nav" class="nav-item current"><a href="/">首页</a></li>
+                <li rel="home-nav" class="nav-item current"><h1><a href="/">神马影院首页</a></h1></li>
                 <li rel="tv-nav" class="nav-item  "><a href="/list/dsj.html">电视剧</a></li>
                 <li rel="movie-nav" class="nav-item  "><a href="/list/dy.html">电影</a></li>
 
@@ -226,7 +226,7 @@
                     <li th:each="rand:${rands}">
 
                         <a th:href="'/info/'+${rand.id}+'.html'" target="_blank" class="play-pic">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src='${rand.img}' th:attr="alt=${rand.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${rand.id}+'.png'" th:attr="alt=${rand.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${rand.beizhu}" class="txt">第30集</label>
                         </a>
@@ -251,7 +251,7 @@
                     <li th:each="dianshi:${newDianshi}">
 
                         <a th:href="'/info/'+${dianshi.id}+'.html'" target="_blank" class="play-pic">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${dianshi.img}" th:attr="alt=${dianshi.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${dianshi.id}+'.png'" th:attr="alt=${dianshi.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dianshi.beizhu}" class="txt">第30集</label>
                         </a>
@@ -274,7 +274,7 @@
                     <li th:each="dianying:${newDianying}">
 
                         <a th:href="'/info/'+${dianying.id}+'.html'" target="_blank" class="play-pic">
-                            <img   src="http://www.aoklite.com/images/wutu.png" th:data-src="${dianying.img}" th:attr="alt=${dianying.name}"/>
+                            <img   src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${dianying.id}+'.png'" th:attr="alt=${dianying.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dianying.beizhu}" class="txt">第30集</label>
                         </a>
@@ -294,7 +294,7 @@
                     <li th:each="dongman:${newDongman}">
 
                         <a th:href="'/info/'+${dongman.id}+'.html'"   target="_blank" class="play-pic">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${dongman.img}" th:attr="alt=${dongman.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${dongman.id}+'.png'" th:attr="alt=${dongman.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${dongman.beizhu}" class="txt">第30集</label>
                         </a>
@@ -316,7 +316,7 @@
                     <li th:each="zongyi:${newZongyi}">
 
                         <a th:href="'/info/'+${zongyi.id}+'.html'"   target="_blank" class="play-pic">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${zongyi.img}" th:attr="alt=${zongyi.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${zongyi.id}+'.png'" th:attr="alt=${zongyi.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${zongyi.beizhu}" class="txt">第30集</label>
                         </a>
@@ -337,7 +337,7 @@
 
                     <li th:each="hanju:${newHanju}">
                         <a th:href="'/info/'+${hanju.id}+'.html'" target="_blank" class="play-pic">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${hanju.img}" th:attr="alt=${hanju.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${hanju.id}+'.png'" th:attr="alt=${hanju.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label th:text="${hanju.beizhu}" class="txt">第30集</label>
                         </a>
@@ -408,7 +408,7 @@
                         <li th:each="randDianyings:${randDianying}">
                             <a th:href="'/info/'+${randDianyings.id}+'.html'" class="play-pic" th:attr="alt=${randDianyings.name}"
                                target="_blank">
-                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDianyings.img}"  th:attr="alt=${randDianyings.name}"/>
+                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${randDianyings.id}+'.png'"  th:attr="alt=${randDianyings.name}"/>
                                 <label class="fbg">&nbsp;</label>
                                 <label class="txt" th:text="${randDianyings.beizhu}">HD高清</label>
                             </a>
@@ -562,7 +562,7 @@
                         <li th:each="randDianshijus:${randDianshiju}">
                             <a th:href="'/info/'+${randDianshijus.id}+'.html'" class="play-pic" th:attr="alt=${randDianshijus.name}"
                                target="_blank">
-                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDianshijus.img}"
+                                <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${randDianshijus.id}+'.png'"
 
                                      th:attr="alt=${randDianshijus.name}"/>
                                 <label class="fbg">&nbsp;</label>
@@ -701,7 +701,7 @@
                     <li th:each="randDongmans:${randDongman}">
                         <a th:href="'/info/'+${randDongmans.id}+'.html'"  class="play-pic" th:attr="alt=${randDongmans.name}"
                            target="_blank">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randDongmans.img}" th:attr="alt=${randDongmans.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${randDongmans.id}+'.png'" th:attr="alt=${randDongmans.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randDongmans.beizhu}">HD高清</label>
                         </a>
@@ -826,7 +826,7 @@
                     <li th:each="randZongyis:${randZongyi}">
                         <a th:href="'/info/'+${randZongyis.id}+'.html'"  class="play-pic" th:attr="alt=${randZongyis.name}"
                            target="_blank">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="${randZongyis.img}"  th:attr="alt=${randZongyis.name}"/>
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${randZongyis.id}+'.png'"  th:attr="alt=${randZongyis.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randZongyis.beizhu}">HD高清</label>
                         </a>
@@ -941,7 +941,7 @@
                     <li th:each="randHanju1:${randHanju}">
                         <a th:href="'/info/'+${randHanju1.id}+'.html'" class="play-pic" th:attr="alt=${randHanju1.name}"
                            target="_blank">
-                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src='${randHanju1.img}'
+                            <img  src="http://www.aoklite.com/images/wutu.png" th:data-src="'http://59.110.61.229:12345/'+${randHanju1.id}+'.png'""
                                  th:attr="alt=${randHanju1.name}"/>
                             <label class="fbg">&nbsp;</label>
                             <label class="txt" th:text="${randHanju1.beizhu}">HD高清</label>
